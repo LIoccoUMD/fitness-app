@@ -5,7 +5,7 @@ from django.db import models
 class Client(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(unique=True, blank=True, null=True)
-    fitness_level = models.CharField(max_length=50, blank=True)  # e.g., Beginner, Advanced
+    fitness_level = models.CharField(max_length=25, blank=True)  # e.g., Beginner, Advanced
     b = models.Field
 
     def __str__(self):
@@ -36,3 +36,21 @@ class KPI(models.Model):
 
     def __str__(self):
         return f"{self.client.name}: {self.metric} = {self.value}"
+    
+    
+    # Check to see if any of these should be ManyToMany or OneToMany
+    # if you run in to any problems.
+class Type(models.Model):
+    TYPE_CHOICES = {
+    (1, "One"),
+    (2, "Two"),
+    (3, "Three"),
+    (4, "Four"),
+    (5, "Five"),
+    }
+    
+    label = models.IntegerField(choices=TYPE_CHOICES,null=False, blank=False)
+    demands = models.CharField(max_length=50)
+
+    def __str__(self):
+        return dict(self.TYPE_CHOICES).get(self.label, str(self.label))
