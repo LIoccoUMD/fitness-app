@@ -47,6 +47,7 @@ class Type(models.Model):
     (3, "Three"),
     (4, "Four"),
     (5, "Five"),
+    (6, "Six"),
     }
     
     label = models.IntegerField(choices=TYPE_CHOICES,null=False, blank=False)
