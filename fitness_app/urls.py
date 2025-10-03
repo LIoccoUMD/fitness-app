@@ -19,7 +19,10 @@ from django.urls import path
 from core import views
 
 urlpatterns = [
-    path("admin", admin.site.urls),
+    path("admin/", admin.site.urls),
     path("index/", views.index, name="index"),
+    path("contact/", views.contact, name="contact"),
+    path("about/", views.about, name="about"),
+    
     # path("blog/page<int:num>/", views.page),
 ]

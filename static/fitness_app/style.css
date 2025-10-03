@@ -1,0 +1,101 @@
+:root[data-theme="light"] {
+  --text: #050420;
+  --background: #fbfbfe;
+  --primary: #e21833;
+  --secondary: #ffffff;
+  --accent: #ffd200;
+}
+:root[data-theme="dark"] {
+  --text: #e0dffb;
+  --background: #010104;
+  --primary: #e21833;
+  --secondary: #000000;
+  --accent: #ffd200;
+}
+
+#navbar {
+  border: 10px solid rebeccapurple;
+  background-image: linear-gradient(to bottom, var(--text), var(--background));
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background);
+  font-size: 50px;
+}
+
+p {
+  color: var(--text);
+}
+
+ul {
+  border: 2px blue solid;
+}
+
+li {
+  list-style-type: none;
+  display: inline;
+  padding: 0;
+  margin: 0;
+  color: var(--text);
+  border: 2px red solid;
+}
+
+.card {
+  margin: 0 auto;
+  padding: 2em;
+  width: 500px;
+  background: var(--secondary);
+  color: var(--text);
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card::after,
+.card::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from var(--angle),
+    var(--primary),
+    var(--secondary),
+    var(--accent),
+    var(--text),
+    var(--background),
+    var(--primary)
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  /* z-index: 1; */
+  z-index: -1;
+  padding: 6px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+
+.card::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+/* Animations / Special FX */
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
