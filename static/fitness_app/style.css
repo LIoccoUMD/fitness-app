@@ -14,9 +14,57 @@
 }
 
 #navbar {
-  border: 10px solid rebeccapurple;
-  background-image: linear-gradient(to bottom, var(--text), var(--background));
+  /* border: 10px solid green; */
+  /* background-image: linear-gradient(to bottom, var(--text), var(--background)); */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
 }
+
+#nav-logo {
+  /* align-self: flex-start; */
+  max-width: 5%; /* logo size */
+  height: auto;
+  /* border: 2px orange solid; */
+}
+
+#navbar #navbar-links {
+  list-style-type: none;
+  margin: 5 5px;
+  color: var(--text);
+  /* border: 2px red solid; */
+  align-content: center;
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  padding: 10px;
+  border: 2px blue solid;
+  width: auto;  
+}
+
+
+#navbar li {
+  list-style-type: none;
+  font-size: large;
+  margin: 0 20px;
+  color: var(--text);
+  /* border: 2px red solid; */
+  align-content: center;
+}
+/*
+#navbar-links {
+  align-items: center;
+} */
+
+#theme-toggle {
+  border-radius: 10px;
+  margin: 0 10px;
+}
+
 
 body {
   font-family: Arial, sans-serif;
@@ -26,19 +74,6 @@ body {
 
 p {
   color: var(--text);
-}
-
-ul {
-  border: 2px blue solid;
-}
-
-li {
-  list-style-type: none;
-  display: inline;
-  padding: 0;
-  margin: 0;
-  color: var(--text);
-  border: 2px red solid;
 }
 
 .card {
