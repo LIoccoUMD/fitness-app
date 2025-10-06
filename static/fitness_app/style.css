@@ -69,20 +69,21 @@
 body {
   font-family: Arial, sans-serif;
   background-color: var(--background);
-  font-size: 50px;
+  font-size: 30px;
 }
 
 p {
   color: var(--text);
+  font-size: 16px;
 }
 
 .card {
   margin: 0 auto;
   padding: 2em;
-  width: 500px;
+  width: 800px;
   background: var(--secondary);
   color: var(--text);
-  text-align: center;
+  text-align: left;
   border-radius: 10px;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

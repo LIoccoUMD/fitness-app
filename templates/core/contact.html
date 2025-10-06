@@ -1,21 +1,40 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <title>Contact Me</title>
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static "fitness_app/style.css" %}" >
+  </head>
+  <div id="navbar">
+    <!-- Home, About, Contact, Light/Dark-->
+    <img id="nav-logo" src="{% static "images/301logo.jpg" %} "
+    alt="301Performance Logo">
+    <ul id="navbar-links">
+      <li><a href="/index">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <button id="theme-toggle">Toggle Theme</button>
+  </div>
+  <body>
+    <p>Contact page</p>
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="author" content="">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  {% comment %} <link href="css/style.css" rel="stylesheet"> {% endcomment %}
-</head>
-
-<body>
-
-  <p>Contact page</p>
-
-  {% comment %} <script src="js/script.js"></script> {% endcomment %}
-</body>
-
+    <script>
+      // JavaScript for theme toggle
+      document.getElementById("theme-toggle").addEventListener("click", () => {
+        const currentTheme =
+          document.documentElement.getAttribute("data-theme");
+        const newTheme = currentTheme === "light" ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", newTheme);
+      });
+    </script>
+  </body>
 </html>

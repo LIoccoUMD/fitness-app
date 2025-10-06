@@ -19,6 +19,7 @@ from django.urls import path
 from core import views
 
 urlpatterns = [
+    path("", views.index, name="index"), # Default view / Home page
     path("admin/", admin.site.urls),
     path("index/", views.index, name="index"),
     path("contact/", views.contact, name="contact"),
