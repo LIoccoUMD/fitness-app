@@ -4,27 +4,35 @@
   <head>
     <meta charset="utf-8" />
     <title>About</title>
-    <meta
-      http-equiv="Cache-Control"
-      content="no-cache, no-store, must-revalidate"
-    />
     <meta name="author" content="" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="{% static "fitness_app/style.css" %}" >
   </head>
-      <div id="navbar"> <!-- Home, About, Contact, Light/Dark-->
-      <img id="nav-logo" src="{% static "images/301logo.jpg" %} " alt="301Performance Logo">
-      <ul id="navbar-links">
-        <li><a href="/index">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-      <button id="theme-toggle">Toggle Theme</button>
-    </div>
+  <div id="navbar">
+    <!-- Home, About, Contact, Light/Dark-->
+    <img id="nav-logo" src="{% static "images/301logo.jpg" %} "
+    alt="301Performance Logo">
+    <ul id="navbar-links">
+      <li><a href="/index">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <button id="theme-toggle">Toggle Theme</button>
+  </div>
   <body>
-    <p>About page</p>
-
+    <h1>Who We Are</h1>
+    <p>
+      Since opening in 2022, 301 Performance has offered a competitive
+      environment for individuals to cultivate their athletic performance
+      through strength and conditioning training.
+    </p>
+    <h1>Our Goal</h1>
+    <p>
+      301 Performance offers sports performance and personal training. All
+      programs are individualized based on personal goals, abilities, and
+      sport-specific demands in order to maximize results.
+    </p>
     <script>
       // JavaScript for theme toggle
       document.getElementById("theme-toggle").addEventListener("click", () => {

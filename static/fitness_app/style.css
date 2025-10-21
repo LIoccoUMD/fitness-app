@@ -24,8 +24,8 @@
 
 #nav-logo {
   /* align-self: flex-start; */
-  max-width: 5%; /* logo size */
-  height: auto;
+  max-width: 65px; /* logo size */
+  height: 65px;
   /* border: 2px orange solid; */
 }
 
@@ -43,9 +43,8 @@
   margin: 0px;
   padding: 10px;
   border: 2px blue solid;
-  width: auto;  
+  width: auto;
 }
-
 
 #navbar li {
   list-style-type: none;
@@ -55,16 +54,11 @@
   /* border: 2px red solid; */
   align-content: center;
 }
-/*
-#navbar-links {
-  align-items: center;
-} */
 
 #theme-toggle {
   border-radius: 10px;
   margin: 0 10px;
 }
-
 
 body {
   font-family: Arial, sans-serif;
@@ -72,7 +66,16 @@ body {
   font-size: 30px;
 }
 
+h1 {
+  /* border: 1px red solid; */
+  text-align: center;
+  justify-content: center;
+  color: var(--text);
+}
+
 p {
+  /* border: 1px blue solid; */
+  text-align: center;
   color: var(--text);
   font-size: 16px;
 }

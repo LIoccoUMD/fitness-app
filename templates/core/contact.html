@@ -4,10 +4,6 @@
   <head>
     <meta charset="utf-8" />
     <title>Contact Me</title>
-    <meta
-      http-equiv="Cache-Control"
-      content="no-cache, no-store, must-revalidate"
-    />
     <meta name="author" content="" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,6 +22,13 @@
   </div>
   <body>
     <p>Contact page</p>
+    {% comment %} Form {% endcomment %}
+    <form>
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname"><br>
+    </form>
 
     <script>
       // JavaScript for theme toggle
